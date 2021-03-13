@@ -1,0 +1,27 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.filter-wrapper.ant-popover-placement-bottomRight {
+    padding-top: 0.3125rem;
+    width: 97%;
+  
+    .ant-popover-inner {
+      max-height: 16.25rem;
+      overflow-y: auto;
+      padding: 0.625rem 0.625rem 0 0.625rem;
+    }
+  
+    .ant-popover-content {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+  
+    .no-options {
+      @include text-formating(0.6875rem, $black-color, unset, normal, "Cadiz-Regular");
+  
+      padding-bottom: 0.5rem;
+    }
+  
+    .ant-popover-content .ant-popover-arrow {
+      top: 1px;
+    }
+}  

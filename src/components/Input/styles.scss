@@ -15,7 +15,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     min-height: 28px;
-    border-radius: 4px;
   }
 
   .ant-input:focus {
@@ -37,6 +36,7 @@
     &:focus {
       border-color: $primary-color;
       box-shadow: none;
+      border-radius: 4px;
     }
   }
 

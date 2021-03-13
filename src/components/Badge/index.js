@@ -6,7 +6,7 @@ import "./styles.scss";
 
 const BadgeComponent = ({ count }) => (
   <span className="badge-wrapper">
-    <Badge overflowCount={99} count={count} />
+    <Badge overflowCount={99} count={`+${count}`} />
   </span>
 );
 

@@ -1,0 +1,45 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.ant-checkbox {
+  margin-top: 0.125rem;
+}
+
+.container {
+  .ant-checkbox-wrapper {
+    @include text-formating(
+      0.6875rem,
+      $black-color,
+      unset,
+      normal,
+      "Cadiz-Regular"
+    );
+
+    display: flex;
+    word-break: break-all;
+    padding-bottom: 0.625rem;
+  }
+
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.selected-item {
+  .ant-checkbox-wrapper-checked {
+    @include text-formating(
+      0.6875rem,
+      $primary-color,
+      unset,
+      normal,
+      "Cadiz-Regular"
+    );
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+}

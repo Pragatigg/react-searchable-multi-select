@@ -1,32 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import InputComponent from "./components/Input";
-import BadgeComponent from "./components/Badge";
-import CheckboxComponent from "./components/Checkbox";
+
+import Example from "./components/Example";
 
 import "./index.css";
 import "antd/dist/antd.css";
 
 import reportWebVitals from './reportWebVitals';
 
-import { CaretDownOutlined } from "@ant-design/icons";
-
 ReactDOM.render(
   <React.StrictMode>
-    <InputComponent
-      className="filter"
-      placeholder={"name"}
-      onChange={() => {}}
-      value={null}
-      ref={null}
-      suffix={
-        <div>
-          <BadgeComponent count={5} />
-          <CaretDownOutlined />
-        </div>
-      }
-    />
-    <CheckboxComponent lable={"male"} />
+    <Example />
   </React.StrictMode>,
   document.getElementById('root')
 );

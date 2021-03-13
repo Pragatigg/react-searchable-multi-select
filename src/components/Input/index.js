@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Input } from "antd";
 
@@ -19,10 +19,10 @@ const InputComponent = ({ placeholder, value, onChange, inputRef, suffix }) => (
 
 InputComponent.propTypes = {
   placeholder: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   inputRef: PropTypes.func.isRequired,
   suffix: PropTypes.element.isRequired
 };
 
-export default memo(InputComponent);
+export default InputComponent;
