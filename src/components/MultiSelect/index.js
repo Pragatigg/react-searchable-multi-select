@@ -11,7 +11,7 @@ import "./styles.scss";
 
 const MultiSelect = ({ placeholder, list, selected, toggleSelection }) => {
   let filterInput = null;
-  const [isPopoverOpen, setPopoverVisibility] = useState(true);
+  const [isPopoverOpen, setPopoverVisibility] = useState(false);
   const [search, setSearch] = useState("");
   const selectedCount = selected.length;
   const togglePopoverVisibility = (visible) => {

@@ -17,6 +17,10 @@
     min-height: 28px;
   }
 
+  .ant-input-suffix {
+    cursor: pointer;
+  }
+
   .ant-input:focus {
     &:focus {
       border-color: $primary-color;
