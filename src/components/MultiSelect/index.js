@@ -14,10 +14,11 @@ const MultiSelect = ({ placeholder, list, selected, toggleSelection }) => {
   const [isPopoverOpen, setPopoverVisibility] = useState(false);
   const [search, setSearch] = useState("");
   const selectedCount = selected.length;
-  const togglePopoverVisibility = (visible) => {
+  const onFocus = () => setPopoverVisibility(true);
+  const togglePopoverVisibility = () => {
     setSearch("");
     filterInput.focus();
-    setPopoverVisibility(visible);
+    setPopoverVisibility(!isPopoverOpen);
   };
   const filterList = search
     ? list.filter((item) =>
@@ -45,13 +46,13 @@ const MultiSelect = ({ placeholder, list, selected, toggleSelection }) => {
       ));
     }
     return <div className="no-options">No options available</div>;
-  };
+  };  
 
   return (
     <PopoverComponent
       overlayClassName="filter-wrapper custom-scrollbar"
       placement="bottomRight"
-      trigger={["click"]}
+      trigger="click"
       isVisible={isPopoverOpen}
       content={getContent(filterList, selected)}
       onVisibleChange={togglePopoverVisibility}
@@ -59,6 +60,7 @@ const MultiSelect = ({ placeholder, list, selected, toggleSelection }) => {
       <InputComponent
         className="filter"
         placeholder={placeholder}
+        onFocus={onFocus}
         onChange={(event) => setSearch(event.target.value)}
         value={isPopoverOpen ? search : selected[0]}
         inputRef={(input) => (filterInput = input)}

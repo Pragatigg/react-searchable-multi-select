@@ -3,7 +3,7 @@
 
 .filter-wrapper.ant-popover-placement-bottomRight {
     padding-top: 0.3125rem;
-    width: 100%;
+    min-width: 300px;
   
     .ant-popover-inner {
       max-height: 16.25rem;

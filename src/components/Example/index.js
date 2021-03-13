@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Row, Col } from "antd";
 import MultiSelect from "../MultiSelect";
 
 const Example = () => {
@@ -13,12 +14,16 @@ const Example = () => {
     }
 
     return (
-        <MultiSelect
-            placeholder="Role"
-            list={list}
-            selected={selected}
-            toggleSelection={toggleSelection}
-        />
+        <Row>
+            <Col sm={12}>
+                <MultiSelect
+                    placeholder="Role"
+                    list={list}
+                    selected={selected}
+                    toggleSelection={toggleSelection}
+                />
+            </Col>
+        </Row>
     )
 };
 
