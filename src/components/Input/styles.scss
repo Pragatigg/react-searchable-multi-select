@@ -1,0 +1,47 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.input-wrapper {
+  .ant-input {
+    @include text-formating(
+      0.6875rem,
+      $black-color,
+      unset,
+      normal,
+      "Cadiz-Regular"
+    );
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 28px;
+    border-radius: 4px;
+  }
+
+  .ant-input:focus {
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: none;
+    }
+  }
+
+  .ant-input:hover {
+    &:hover {
+      border-color: $primary-color;
+    }
+  }
+
+  .ant-input-affix-wrapper {
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: none;
+    }
+  }
+
+  .ant-input-affix-wrapper-focused {
+    border-color: $primary-color;
+    box-shadow: none;
+  }
+}

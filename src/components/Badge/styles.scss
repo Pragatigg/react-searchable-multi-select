@@ -1,0 +1,16 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.badge-wrapper {
+  .ant-badge-count {
+    @include text-formating(
+      0.6875rem,
+      $primary-color,
+      1.25rem,
+      normal,
+      "Cadiz-Bold"
+    );
+
+    background: $hover-color;
+  }
+}
