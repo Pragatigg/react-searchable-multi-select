@@ -4,15 +4,16 @@ import { Checkbox } from "antd";
 
 import "./styles.scss";
 
-const CheckboxComponent = ({ label, onChange }) => (
+const CheckboxComponent = ({ label, onChange, checked }) => (
   <div className="checkbox-wrapper">
-    <Checkbox onChange={onChange}>{label}</Checkbox>
+    <Checkbox checked={checked} onChange={onChange}>{label}</Checkbox>
   </div>
 );
 
 CheckboxComponent.propTypes = {
   label: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  checked: PropTypes.bool.isRequired
 };
 
 export default CheckboxComponent;

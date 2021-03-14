@@ -14,7 +14,7 @@ const MultiSelect = ({ placeholder, list, selected, toggleSelection }) => {
   const [isPopoverOpen, setPopoverVisibility] = useState(false);
   const [search, setSearch] = useState("");
   const selectedCount = selected.length;
-  const onFocus = () => setPopoverVisibility(true);
+  const openPopover = () => setPopoverVisibility(true);
   const togglePopoverVisibility = () => {
     setSearch("");
     filterInput.focus();
@@ -46,7 +46,7 @@ const MultiSelect = ({ placeholder, list, selected, toggleSelection }) => {
       ));
     }
     return <div className="no-options">No options available</div>;
-  };  
+  }; 
 
   return (
     <PopoverComponent
@@ -60,12 +60,12 @@ const MultiSelect = ({ placeholder, list, selected, toggleSelection }) => {
       <InputComponent
         className="filter"
         placeholder={placeholder}
-        onFocus={onFocus}
+        onFocus={openPopover}
         onChange={(event) => setSearch(event.target.value)}
         value={isPopoverOpen ? search : selected[0]}
         inputRef={(input) => (filterInput = input)}
         suffix={
-          <div onClick={togglePopoverVisibility}>
+          <div onClick={openPopover}>
             {shouldDisplayBadge && <BadgeComponent count={selectedCount - 1} />}
             <CaretDownOutlined />
           </div>

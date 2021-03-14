@@ -13,17 +13,17 @@ const PopoverComponent = ({
     content,
     onVisibleChange 
 }) => (
-  <Popover
-    overlayClassName={overlayClassName}
-    placement={placement}
-    trigger={trigger}
-    visible={isVisible}
-    content={content}
-    onVisibleChange={onVisibleChange}
-  >
-    {children}
-  </Popover>
-);
+    <Popover
+      overlayClassName={overlayClassName}
+      placement={placement}
+      trigger={trigger}
+      visible={isVisible}
+      content={content}
+      onVisibleChange={onVisibleChange}
+    >
+      {children}
+    </Popover>
+  );
 
 PopoverComponent.propTypes = {
     children: PropTypes.element.isRequired,
