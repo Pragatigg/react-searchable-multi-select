@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import PropTypes from "prop-types";
 import { Input } from "antd";
 
@@ -27,4 +27,4 @@ InputComponent.propTypes = {
   onFocus: PropTypes.func.isRequired
 };
 
-export default InputComponent;
+export default memo(InputComponent);

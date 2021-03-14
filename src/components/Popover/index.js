@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import PropTypes from "prop-types";
 import { Popover } from "antd";
 
@@ -35,4 +35,4 @@ PopoverComponent.propTypes = {
     onVisibleChange: PropTypes.func.isRequired 
 };
 
-export default PopoverComponent;
+export default memo(PopoverComponent);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import PropTypes from "prop-types";
 import { Checkbox } from "antd";
 
@@ -16,4 +16,4 @@ CheckboxComponent.propTypes = {
   checked: PropTypes.bool.isRequired
 };
 
-export default CheckboxComponent;
+export default memo(CheckboxComponent);
