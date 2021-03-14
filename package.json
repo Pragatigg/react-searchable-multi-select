@@ -1,5 +1,5 @@
 {
-  "name": "@pragati.garud/react-searchable-multi-select",
+  "name": "react-searchable-multi-select",
   "version": "1.0.0",
   "private": false,
   "description": "A library to search and select multiple values from list of options.",
@@ -55,10 +55,10 @@
     "babel-preset-stage-0": "^6.24.1"
   },
   "peerDependencies": {
-    "antd": "^4.13.1",
-    "node-sass": "^5.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "antd": ">=4.13.1",
+    "node-sass": ">=5.0.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "repository": {
     "type": "git",
