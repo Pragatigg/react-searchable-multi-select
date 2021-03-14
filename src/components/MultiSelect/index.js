@@ -9,10 +9,11 @@ import PopoverComponent from "../Popover";
 
 import "./styles.scss";
 
-const MultiSelect = ({ placeholder, list, selected, toggleSelection }) => {
+const MultiSelect = ({ placeholder, options, onSelectionChange }) => {
   let filterInput = null;
   const [isPopoverOpen, setPopoverVisibility] = useState(false);
   const [search, setSearch] = useState("");
+  const [selected, setSelected] = useState([]);
   const selectedCount = selected.length;
   const openPopover = () => setPopoverVisibility(true);
   const togglePopoverVisibility = () => {
@@ -21,11 +22,21 @@ const MultiSelect = ({ placeholder, list, selected, toggleSelection }) => {
     setPopoverVisibility(!isPopoverOpen);
   };
   const filterList = search
-    ? list.filter((item) =>
+    ? options.filter((item) =>
         String(item).toLowerCase().includes(search.toLowerCase())
       )
-    : list;
+    : options;
   const shouldDisplayBadge = selectedCount > 1 && !isPopoverOpen;
+  const toggleSelection = (value, event) => {
+    let newSelection = []
+    if (event.target.checked) {
+        newSelection = [...selected, value];
+    } else {
+        newSelection = selected.filter((option) => option !== value);
+    }
+    setSelected(newSelection);
+    onSelectionChange(newSelection);
+  };
   const getContent = (list, selected) => {
     if (list.length) {
       return list.map((item, index) => (
@@ -46,7 +57,7 @@ const MultiSelect = ({ placeholder, list, selected, toggleSelection }) => {
       ));
     }
     return <div className="no-options">No options available</div>;
-  }; 
+  };
 
   return (
     <PopoverComponent
@@ -77,9 +88,8 @@ const MultiSelect = ({ placeholder, list, selected, toggleSelection }) => {
 
 MultiSelect.propTypes = {
   placeholder: PropTypes.string.isRequired,
-  list: PropTypes.array.isRequired,
-  selected: PropTypes.array.isRequired,
-  toggleSelection: PropTypes.func.isRequired
+  options: PropTypes.array.isRequired,
+  onSelectionChange: PropTypes.func.isRequired
 };
 
 export default MultiSelect;

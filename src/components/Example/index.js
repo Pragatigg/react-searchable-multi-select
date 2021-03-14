@@ -1,26 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { Row, Col } from "antd";
 import MultiSelect from "../MultiSelect";
 
 const Example = () => {
-    const list = ["Software Developer", "senior Software Developer", "Team Lead", "Manager"];
-    const [selected, setSelected] = useState([]);
-    const toggleSelection = (value, event) => {
-        if (event.target.checked) {
-            setSelected([...selected, value]);
-        } else {
-            setSelected(selected.filter((option) => option !== value));
-        }
-    }
-
+    const options = ["Software Developer", "senior Software Developer", "Team Lead", "Manager"];
+    const onSelectionChange = (selected) => console.log(selected);
     return (
         <Row>
             <Col sm={12}>
                 <MultiSelect
                     placeholder="Role"
-                    list={list}
-                    selected={selected}
-                    toggleSelection={toggleSelection}
+                    options={options}
+                    onSelectionChange={onSelectionChange}
                 />
             </Col>
         </Row>
