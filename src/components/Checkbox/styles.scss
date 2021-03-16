@@ -1,5 +1,4 @@
-@import "../../styles/mixins.scss";
-@import "../../styles/variables.scss";
+$primary-color: #f18805;
 
 .border-color {
   border-color: $primary-color;
@@ -7,6 +6,9 @@
 
 .checkbox-wrapper {
   .ant-checkbox {
+    margin-top: 2px;
+    top: 0;
+
     &:hover {
       .ant-checkbox-inner {
         @extend .border-color;

@@ -1,5 +1,4 @@
-@import "../../styles/mixins.scss";
-@import "../../styles/variables.scss";
+$primary-color: #f18805;
 
 .ant-checkbox {
   margin-top: 0.125rem;
@@ -7,14 +6,7 @@
 
 .container {
   .ant-checkbox-wrapper {
-    @include text-formating(
-      0.6875rem,
-      $black-color,
-      unset,
-      normal,
-      "Cadiz-Regular"
-    );
-
+    color: #000;
     display: flex;
     word-break: break-all;
     padding-bottom: 0.625rem;
@@ -29,13 +21,7 @@
 
 .selected-item {
   .ant-checkbox-wrapper-checked {
-    @include text-formating(
-      0.6875rem,
-      $primary-color,
-      unset,
-      normal,
-      "Cadiz-Regular"
-    );
+    color: $primary-color;
   }
 
   .ant-checkbox-checked .ant-checkbox-inner {
