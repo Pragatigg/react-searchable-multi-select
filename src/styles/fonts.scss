@@ -26,17 +26,3 @@
     font-weight: normal;
     font-style: normal;
   }
-  
-  @font-face {
-    font-family: "Cadiz-Light";
-    src: url("../../assets/vendors/cadiz/Cadiz-Light.eot");
-    src:
-      url("../../assets/vendors/cadiz/Cadiz-Light.eot?#iefix")
-      format("embedded-opentype"),
-      url("../../assets/vendors/cadiz/Cadiz-Light.woff2") format("woff2"),
-      url("../../assets/vendors/cadiz/Cadiz-Light.woff") format("woff"),
-      url("../../assets/vendors/cadiz/Cadiz-Light.ttf") format("truetype"),
-      url("../../assets/vendors/cadiz/Cadiz-Light.svg#Cadiz-Light") format("svg");
-    font-weight: 300;
-    font-style: normal;
-  }
