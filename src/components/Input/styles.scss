@@ -1,16 +1,9 @@
-@import "../../styles/mixins.scss";
-@import "../../styles/variables.scss";
+$black-color: #000;
+$primary-color: #f18805;
 
 .input-wrapper {
   .ant-input {
-    @include text-formating(
-      0.6875rem,
-      $black-color,
-      unset,
-      normal,
-      "Cadiz-Regular"
-    );
-
+    color: $black-color;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
