@@ -1,6 +1,6 @@
 {
   "name": "react-searchable-multi-select",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "description": "A library to search and select multiple values from list of options.",
   "main": "build/index.js",
