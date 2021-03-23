@@ -1,6 +1,6 @@
 {
   "name": "react-searchable-multi-select",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": false,
   "description": "A library to search and select multiple values from list of options.",
   "main": "build/index.js",
@@ -18,8 +18,8 @@
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.0.0",
     "node-sass": "^5.0.0",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
