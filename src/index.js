@@ -4,10 +4,10 @@
 // import Example from "./components/Example";
 
 import "./index.css";
-import "antd/dist/antd.css";
+import "antd/dist/antd.css"
 
 // import reportWebVitals from './reportWebVitals';
-import MultiSelect from './components/MultiSelect';
+import MultiSelect from './components/MultiSelect'
 
 // ReactDOM.render(
 //   <React.StrictMode>
